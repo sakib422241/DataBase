@@ -1,0 +1,73 @@
+1. 
+SELECT ename, sal  
+	FROM EMP 
+	WHERE sal > 2850; 
+---------------------------------------------------------
+2.
+SELECT ename,deptno   
+ FROM EMP 
+   WHERE empno = 7566; 
+---------------------------------------------------------
+3.
+SELECT ename, job, hiredate 
+	FROM EMP 	
+        WHERE hiredate BETWEEN '20-FEB-81' AND '01-MAY-81' 
+	ORDER BY hiredate; 
+ -----------------------------------------------------------
+4.
+SELECT ename, deptno 
+	FROM EMP 
+	WHERE deptno IN ('10', '30') 
+	ORDER BY ename;
+------------------------------------------------------------- 
+5.
+	SELECT ename AS "Employee", sal AS "Monthly Salary" 
+	FROM EMP 
+        WHERE sal > 1500 AND deptno IN ('10', '30')
+---------------------------------------------------------------
+
+6.
+SELECT ename, hiredate 
+    FROM EMP 
+    WHERE hiredate LIKE '%82'; 
+---------------------------------------------------------------
+7.
+SELECT ename, job 
+	FROM EMP 
+	WHERE mgr IS NULL; 
+----------------------------------------------------------------
+8.
+SELECT ename, sal, comm 
+	FROM EMP 
+	WHERE comm IS NOT NULL   
+        ORDER BY sal DESC, comm DESC; 
+------------------------------------------------------------------
+9.
+SELECT ename 
+	FROM EMP 
+	WHERE ename LIKE '__A%'; 
+-------------------------------------------------------------------
+
+10.
+SELECT ename 
+	FROM EMP 
+	WHERE ename LIKE '%L%L%' AND deptno = 30 OR mgr = 7782; 
+--------------------------------------------------------------------
+11.
+SELECT ename, job, sal 
+   FROM EMP 
+   WHERE job IN ('CLERK', 'ANALYST') AND sal NOT IN (1000,3000,5000);
+----------------------------------------------------------------------
+
+  
+
+
+
+
+
+
+
+ 
+
+
+

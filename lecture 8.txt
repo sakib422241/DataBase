@@ -1,0 +1,37 @@
+1.
+select round (max(sal)) "maximum" ,round (min (sal)) "minimum",round (sum(sal)) "sum",round (avg(sal)) "average"
+From emp;
+----------------------------------------------------------------------------------------------------------------------------
+2.
+SELECT deptno, ROUND(MAX(sal),0) "Maximum",
+ ROUND(MIN(sal),0) "Minimum",
+ ROUND(SUM(sal),0) "Sum",
+ ROUND(AVG(sal),0) "Average"
+FROM emp
+GROUP BY deptno;
+-----------------------------------------------------------------------------------------------------------------------------
+3.
+SELECT job, ROUND(MAX(sal),0) "Maximum",
+ ROUND(MIN(sal),0) "Minimum",
+ ROUND(SUM(sal),0) "Sum",
+ ROUND(AVG(sal),0) "Average"
+FROM emp
+GROUP BY job;
+-----------------------------------------------------------------------------------------------------------------------------
+4.
+SELECT deptno,ename,job, MIN(sal)
+FROM emp
+where job='MANAGER'
+GROUP BY deptno,ename,job
+order by deptno,ename,job,MIN(sal);
+-----------------------------------------------------------------------------------------------------------------------------
+5.
+-----------------------------------------------------------------------------------------------------------------------------
+6.
+SELECT job, Max(sal+comm)
+FROM emp 
+GROUP BY job
+-------------------------------------------------------------------------------------------------------------------------------
+7.SELECT job,deptno,ename,Max(sal)
+FROM emp
+group by job,deptno,ename
